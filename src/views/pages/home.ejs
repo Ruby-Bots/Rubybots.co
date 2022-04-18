@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/_pages/home.css">
+    <link rel="stylesheet" href="/styles/_components/navbar.css">
+    <link rel="stylesheet" href="/styles/_components/buttons.css">
+    <link rel="stylesheet" href="/styles/_abstract/root.css">
+    <script src="https://kit.fontawesome.com/0e4308e3cd.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/957399182115745802/965716778066006056/Full_Ruby_Logo_Bordered_Corners.png" type="image/x-icon">
+    <title>Rubybots.co | The only resources you need for your discord server</title>
+</head>
+<body>
+    <%- include("../components/navbar.ejs") %>
+    <div class="main">
+        <div class="header">
+            <h1>Unlock the true experience with <span class="ruby">RubyBots</span>!</h1>
+            <p>Unlock your true servers potential with rubybots's resources and applications! Manage all your server needs, including support, moderation, entertainment, events and so much more! Dont trust our applications to help your server? Well everything is open source!</p>
+            <div class="buttons">
+                <a href="/community" class="btn secondary">Community</a>
+                <a href="/github" class="btn primary">Github</a>
+            </div>
+            <div class="projects">
+                <% repos.forEach((repo) => {%>
+                    <div class="project">
+                    <a href="<%= repo.html_url %>">
+                        <div class="project_header">
+                            <h1><%= repo.name %></h1>
+                        </div>
+                        <div class="project_description">
+                            <p><%= repo.description || "No repository description found!" %></p>
+                        </div>
+                    </a>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const userIcon = document.getElementById("userIcon");
+    const login_dropdown = document.getElementById("login_dropdown");
+    const closeIcon = document.getElementById("close");
+    userIcon.onclick = function() {
+        login_dropdown.classList.add("login__active");
+    }
+    closeIcon.onclick = function() {
+        console.log(login_dropdown.classList)
+        login_dropdown.classList.remove("login__active");
+    }
+
+</script>
+</html>

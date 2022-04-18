@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fixed">
+    <div class="nav__bar">
+        <div class="nav__branding">
+            <h1>Ruby<span class="domain">bots.co</span></h1>
+        </div>
+        <div class="nav__links">
+            <div class="list">
+                <ul>
+                    <li><a href="/">Main</a></li>
+                    <li><a href="/community">Community</a></li>
+                </ul>
+            </div>
+            <div class="login__dropdown">
+                    <% if(!user) {%>
+                        <a href="/login" class="btn primary">Login</a>
+                    <% } else {%>
+                        <div class="user" id="userIcon">
+                            <div class="user__icon">
+                                <img src="<%= user.avatar_url %>" alt="<%= user.tag %>'s icon">
+                            </div>
+                        </div>
+                    <%} %>
+            </div>
+        </div>
+    </div>
+    <div class="login_panel" id="login_dropdown">
+        <div class="close" id="close">
+            <div class="close_line"></div>
+            <div class="close_line"></div>
+        </div>
+        <ul>
+            <li>
+                <a href="/comingsoon">Panel</a>
+            </li>
+            <li>
+                <a href="/logout">Sign Out</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</body>
+</html>

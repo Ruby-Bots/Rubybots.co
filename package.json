@@ -1,0 +1,50 @@
+{
+  "name": "rubybots.co",
+  "version": "1.0.0",
+  "description": "Rubybots.co's main webpage, discord oauth included and much more!",
+  "main": "dist/server.ts",
+  "scripts": {
+    "dev": "ts-node src/server.ts",
+    "start": "npm run build && node dist/server.js",
+    "build": "tsc"
+  },
+  "keywords": [
+    "api",
+    "discord",
+    "discord.js",
+    "website",
+    "express",
+    "typescript",
+    "discord oauth",
+    "discord-oauth",
+    "oauth"
+  ],
+  "author": "RubyBots",
+  "license": "ISC",
+  "dependencies": {
+    "@types/passport-discord": "^0.1.5",
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "chalk": "^2.4.1",
+    "connect-mongo": "^4.6.0",
+    "cookies": "^0.8.0",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "glob": "^7.2.0",
+    "mongoose": "^6.3.0",
+    "passport": "^0.5.2",
+    "passport-discord": "^0.1.4",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/cookies": "^0.7.7",
+    "@types/express-session": "^1.17.4",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^17.0.24",
+    "@types/passport": "^1.0.7",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}

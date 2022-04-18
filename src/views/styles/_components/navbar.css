@@ -1,0 +1,119 @@
+.nav__bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px 20px 20px;
+}
+.nav__branding h1 {
+  font-family: var(--header-font);
+}
+
+.nav__branding span {
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+.nav__links {
+  display: flex;
+}
+.nav__links .list ul {
+  display: flex;
+  margin-top: 2.25rem;
+  margin-right: 1.5rem;
+}
+.nav__links .list ul li {
+  list-style-type: none;
+  font-family: var(--header-font);
+  font-weight: 400;
+  margin-left: 25px;
+}
+.nav__links .list ul li a {
+  color: var(--gray);
+}
+
+.nav__links .login__dropdown {
+  font-family: var(--header-font);
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.nav__links .login__dropdown a {
+  margin-top: 1.65rem;
+}
+.user {
+  margin-top: 1.4rem;
+}
+.user__icon img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 2px solid var(--gray);
+  cursor: pointer;
+}
+
+/* Big Sliding User Dropdown esc thing */
+
+ul {
+  list-style-type: none;
+}
+
+.close {
+    position: fixed;
+    cursor: pointer;
+    left: 92.5%;
+    z-index: 999;
+}
+.close_line {
+  margin-left: 4vw;
+  margin-top: 6vh;
+  width: 28px;
+  height: 2px;
+  background-color: var(--white);
+  transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.close_line:first-child {
+  margin-bottom: 4px;
+  transform: rotate(45deg);
+}
+.close_line:last-child {
+  margin-top: 4px;
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.login_panel {
+  position: fixed;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 998;
+  background: var(--fade-bg);
+  transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.login_panel ul {
+  margin-top: 10vh;
+}
+
+.login_panel ul li {
+  text-align: center;
+  list-style-type: none;
+  font-family: var(--header-font);
+  font-weight: 900;
+}
+
+.login_panel ul li a {
+  letter-spacing: 0;
+  font-size: 15rem;
+  opacity: 0.5;
+  color: var(--white);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.login_panel ul li a:hover {
+  letter-spacing: 2rem;
+  opacity: 1;
+}
+
+.login__active {
+    bottom: 0%;
+}
